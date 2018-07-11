@@ -201,16 +201,16 @@ end
 
 
 def big_shoe_rebounds
-    shoe_size = {}
-    ref_size = 0
-    game_hash.each { |team, team_attr| 
-      team_attr.each { |attr, values| 
-        if attr == :players
-          values.each { |name, stats| 
-          stats.select {|stat_name, stat_val| 
+  shoe_size = {}
+  ref_size = 0
+    game_hash.each do |team, team_date| 
+      team_data.each do |key, value| 
+        if key == :players
+          value.each do |name, stats| 
+          stats.select do |stat_name, stat_val| 
             if stat_name == :shoe && stat_val > ref_size
-                shoe_size[stat_name]=stat_val
-                shoe_size[:rebounds]= game_hash[team][:players][name][:rebounds]
+                shoe_size[stat_name] = stat_val
+                shoe_size[:rebounds] = game_hash[team][:players][name][:rebounds]
                 ref_size = stat_val
             end
             }
