@@ -201,8 +201,8 @@ end
 
 
 def big_shoe_rebounds
-shoe_size = {}
-ref_size = 0
+  shoe_size = {}
+  ref_size = 0
   game_hash.each do |team, team_date| 
     team_data.each do |key, value| 
       if key == :players
