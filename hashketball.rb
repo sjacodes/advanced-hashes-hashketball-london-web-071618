@@ -214,7 +214,6 @@ ref_size = 0
               ref_size = stat_val
           end
         end
-        end
       end
     end
   end 
