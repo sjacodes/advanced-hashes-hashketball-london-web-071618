@@ -218,6 +218,6 @@ ref_size = 0
       end
     end
   end 
-  return shoe_size[:rebounds]
+  shoe_size[:rebounds]
 end
 
