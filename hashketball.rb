@@ -129,4 +129,58 @@ def num_points_scored(player_name)
   end
 end
 
-    
+def shoe_size(player_name)
+  game_hash.each do  |team, team_data| 
+    team_data.each do |key, value| 
+      if key == :players
+        value.each do |name, stats| 
+          if name == player_name
+             return game_hash[team][:players][player_name][:shoe] 
+          end
+        end
+      end
+    end
+  end
+end
+
+def team_colors(team_name)
+  game_hash.each do  |team, team_data| 
+    team_data.each do |key, value| 
+      if value == team_name
+        puts "#{key}, #{value}"
+        return game_hash[team][:colors]
+      end
+    end
+  end
+end
+
+def team_names
+  array_of_team_names = []
+  game_hash.each do |team, team_data|
+    team_data.each do |key, value|
+      if key == :team_name
+        array_of_team_names << value
+      end
+    end
+  end
+  return array_of_team_names
+end
+
+def player_numbers(team_name)
+  array_of_jersey_numbers = []
+  game_hash.each do |team, team_data|
+    team_data.each do |key, value|
+      if value == team_name
+        game_hash[team][:players].each do |name, stats|
+          stats.each do |key, value|
+            if key == :number
+              array_of_jersey_numbers << value
+            end
+          end
+        end
+      end
+    end
+  end
+  return array_of_jersey_numbers
+end
+
