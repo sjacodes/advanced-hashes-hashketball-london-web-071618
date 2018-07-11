@@ -218,6 +218,6 @@ def big_shoe_rebounds
       end
     end
   end 
-  shoe_size[:rebounds]
+  return shoe_size[:rebounds]
 end
 
