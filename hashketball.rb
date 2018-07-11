@@ -184,3 +184,20 @@ def player_numbers(team_name)
   return array_of_jersey_numbers
 end
 
+def player_stats(player_name)
+  game_hash.each do |team, team_data| 
+    team_data.each do |key, value| 
+      if key == :players
+        value.each do |k, v| 
+          if k == player_name 
+            return game_hash[team][:players][player_name] 
+          end
+        end
+      end
+    end
+  end
+end
+
+def big_shoe_rebounds
+  
+  
