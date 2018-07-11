@@ -214,7 +214,6 @@ def big_shoe_rebounds
               ref_size = stat_val
           end
         end
-        end
       end
     end
   end 
