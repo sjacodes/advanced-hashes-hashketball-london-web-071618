@@ -213,10 +213,11 @@ def big_shoe_rebounds
                 shoe_size[:rebounds] = game_hash[team][:players][name][:rebounds]
                 ref_size = stat_val
             end
-            }
-            }
-         end
-        }
-      } 
-    shoe_size[:rebounds]
-    end
+          end
+          end
+        end
+      end
+    end 
+    return shoe_size[:rebounds]
+  end
+end
